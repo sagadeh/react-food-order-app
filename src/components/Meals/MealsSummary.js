@@ -5,12 +5,17 @@ const MealsSummary = () => {
     <section className={classes.summary}>
       <h2>Delicious Food, Delivered To You</h2>
       <p>
-        Choose your favorite meal from our broad selection of available meals
-        and enjoy a delicious lunch or dinner at home.
+        <span className={classes["red-bold"]}>Landmark.ph</span> offers a
+        convenient way for shoppers to buy groceries online without ever leaving
+        the comfort of their homes.
       </p>
       <p>
-        All our meals are cooked with high-quality ingredients, just-in-time and
-        of course by experienced chefs!
+        Just like its physical stores,{" "}
+        <span className={classes["red-bold"]}>Landmark.ph</span> carries an
+        extensive product selection – from fresh and frozen produce, groceries,
+        home care essentials, personal care items and other rare finds and
+        exclusive merchandise – all ready to be added to carts and delivered to
+        people on demand.
       </p>
     </section>
   );

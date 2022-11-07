@@ -16,3 +16,8 @@
   font-size: 2rem;
   margin-top: 0;
 }
+
+.red-bold {
+  color: #c40d12;
+  font-weight: bold;
+}
