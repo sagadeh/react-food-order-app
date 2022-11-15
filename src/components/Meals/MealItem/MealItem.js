@@ -1,25 +1,27 @@
-import { useContext } from "react";
+import { useDispatch } from "react-redux";
 
 import MealItemForm from "./MealItemForm";
 import classes from "./MealItem.module.css";
-import CartContext from "../../../store/cart-context";
+import { cartActions } from "../../../store/cart-slice";
 
 const MealItem = (props) => {
-  const cartCtx = useContext(CartContext);
+  const dispatch = useDispatch();
 
   const price = `${props.price.toFixed(2)}`;
 
   function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   const addToCartHandler = (amount) => {
-    cartCtx.addItem({
-      id: props.id,
-      name: props.name,
-      amount: amount,
-      price: props.price,
-    });
+    dispatch(
+      cartActions.addItemToCart({
+        id: props.id,
+        name: props.name,
+        amount: amount,
+        price: props.price,
+      })
+    );
   };
 
   return (
